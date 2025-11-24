@@ -102,14 +102,33 @@
 	object-position: center;
 }
 
-.main__card:nth-child(1) .card__image-item { filter: none; }
-.main__card:nth-child(2) .card__image-item { filter: sepia(1); }
-.main__card:nth-child(3) .card__image-item { filter: blur(3px); }
-.main__card:nth-child(4) .card__image-item { filter: invert(1); }
-.main__card:nth-child(5) .card__image-item { filter: grayscale(1); }
-.main__card:nth-child(6) .card__image-item { filter: brightness(4); }
-.main__card:nth-child(7) .card__image-item { filter: hue-rotate(300deg); }
-.main__card:nth-child(8) .card__image-item { filter: brightness(2) contrast(5); }
+.main__card:nth-child(2) .card__image-item {
+	filter: sepia(1);
+}
+
+.main__card:nth-child(3) .card__image-item {
+	filter: blur(3px);
+}
+
+.main__card:nth-child(4) .card__image-item {
+	filter: invert(1);
+}
+
+.main__card:nth-child(5) .card__image-item {
+	filter: grayscale(1);
+}
+
+.main__card:nth-child(6) .card__image-item {
+	filter: brightness(4);
+}
+
+.main__card:nth-child(7) .card__image-item {
+	filter: hue-rotate(300deg);
+}
+
+.main__card:nth-child(8) .card__image-item {
+	filter: brightness(2) contrast(5);
+}
 
 .card__content {
 	border: 2px solid var(--border-color);
@@ -201,14 +220,11 @@
 
 .like-icon.is-liked .sparks {
 	opacity: 1;
+	animation: sparks 0.3s 0.3s ease-in;
 }
 
 .like-icon.is-liked .heart {
 	animation: scale 0.3s 0.1s ease-in;
-}
-
-.like-icon.is-liked .sparks {
-	animation: sparks 0.3s 0.3s ease-in;
 }
 
 .card__icon-button {
