@@ -1,1 +1,16 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+	--font-main: 'Inter-Variable', sans-serif;
+	--font-title: 'PressStart2P', monospace;
+
+	--text-color: #000;
+	--bg-color: #fff;
+	--border-color: #000;
+
+	--container-width: clamp(23.44rem, 16.29rem + 30.52svi, 43.75rem);
+	--title-size: clamp(3.06rem, 2.71rem + 1.5vw, 4.06rem);
+
+	--heart-contour: #000;
+	--heart-sparks: #ff0000;
+	--backdrop-color: rgb(0 0 0 / 0.75);
+}
