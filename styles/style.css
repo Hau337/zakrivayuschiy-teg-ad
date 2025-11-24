@@ -20,6 +20,7 @@
 	min-width: 320px;
 	min-height: 100dvh;
 	font-family: var(--font-main);
+	font-variation-settings: 'wght' 400;
 	background-color: var(--bg-color);
 	color: var(--text-color);
 }
@@ -41,6 +42,7 @@
 .header-title {
 	margin-block-start: 20px;
 	font-size: clamp(0.875rem, 0.68rem + 0.85vw, 1.44rem);
+	font-variation-settings: 'wght' 700;
 }
 
 .main__card {
@@ -60,6 +62,7 @@
 	font-weight: 700;
 	font-size: 18px;
 	font-family: var(--font-main);
+	font-variation-settings: 'wght' 700;
 	text-wrap: balance;
 	margin: 0;
 }
@@ -81,7 +84,16 @@
 	font-family: var(--font-title);
 	font-size: 14px;
 	color: var(--text-color);
-	text-shadow: 0 1px 1px #fff, 1px 0 1px #fff, 0 -1px 1px #fff, -1px 0 1px #fff;
+	-webkit-text-stroke: 1px #fff;
+	text-stroke: 1px #fff;
+}
+
+@supports (text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff) {
+	.card__image-label {
+		text-shadow: none;
+		-webkit-text-stroke: 1px #fff;
+		text-stroke: 1px #fff;
+	}
 }
 
 .card__image-item {
@@ -90,6 +102,15 @@
 	object-position: center;
 }
 
+.main__card:nth-child(1) .card__image-item { filter: none; }
+.main__card:nth-child(2) .card__image-item { filter: sepia(1); }
+.main__card:nth-child(3) .card__image-item { filter: blur(3px); }
+.main__card:nth-child(4) .card__image-item { filter: invert(1); }
+.main__card:nth-child(5) .card__image-item { filter: grayscale(1); }
+.main__card:nth-child(6) .card__image-item { filter: brightness(4); }
+.main__card:nth-child(7) .card__image-item { filter: hue-rotate(300deg); }
+.main__card:nth-child(8) .card__image-item { filter: brightness(2) contrast(5); }
+
 .card__content {
 	border: 2px solid var(--border-color);
 	padding: 25px 25px 20px;
@@ -97,6 +118,7 @@
 
 .card__text {
 	font-size: 18px;
+	font-variation-settings: 'wght' 400;
 }
 
 .card__text:not(:first-child) {
